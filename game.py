@@ -105,11 +105,12 @@ def proverka_sinie(y, x):
             pole[x - 1][y] = 4
         if x != 2 and pole[x + 3][y] == 2:
             pole[x + 3][y] = 4
-        if y !=0 and y != 5 and pole[x + 1][y] == 1 and pole[x + 2][y] == 1 and pole[x+3][y] == 1:
+        if y > 0 and y < 5 and x < 2 and pole[x + 1][y] == 1 and pole[x + 2][y] == 1 and pole[x+3][y] == 1:
+            print("1")
             if pole[x + 3][y+1] == 2:
                 pole[x + 3][y+1] = 4
-            if pole[x+3][y-1] == 2:
-                pole[x+3][y-1] = 4
+            if pole[x-3][y-1] == 2:
+                pole[x-3][y-1] = 4
         if x == 0 and pole[x+1][y] == 1 and pole[x+2][y] == 1 and pole[x+3][y] == 1 and pole[x+4][y] == 2:
             pole[x+4][y] = 4
         if y != 0 and x < 2 and pole[x + 3][y] == 1 and pole[x + 3][y - 1] == 2:
@@ -139,7 +140,7 @@ def proverka_sinie(y, x):
             pole[x - 3][y] = 4
         if x != 4 and pole[x + 1][y] == 2:
             pole[x + 1][y] = 4
-        if y !=0 and y != 5 and pole[x - 1][y] == 1 and pole[x - 2][y] == 1 and pole[x-3][y] == 1:
+        if y > 0 and y < 5 and x > 2 and pole[x - 1][y] == 1 and pole[x - 2][y] == 1 and pole[x-3][y] == 1:
             if pole[x - 3][y+1] == 2:
                 pole[x - 3][y+1] = 4
             if pole[x-3][y-1] == 2:
@@ -279,7 +280,7 @@ def proverka_zelenie(y, x):
             pole[x - 1][y] = 3
         if x != 2 and pole[x + 3][y] == 1:
             pole[x + 3][y] = 3
-        if y != 0 and y != 5 and pole[x + 1][y] == 2 and pole[x + 2][y] == 2 and pole[x+3][y] == 2:
+        if y > 0 and y < 5 and x < 2 and pole[x + 1][y] == 2 and pole[x + 2][y] == 2 and pole[x+3][y] == 2:
             if pole[x + 3][y+1] == 1:
                 pole[x + 3][y+1] = 3
             if pole[x+3][y-1] == 1:
@@ -321,7 +322,7 @@ def proverka_zelenie(y, x):
             pole[x - 3][y] = 3
         if x != 4 and pole[x + 1][y] == 1:
             pole[x + 1][y] = 3
-        if y != 0 and y != 5 and pole[x - 1][y] == 2 and pole[x - 2][y] == 2 and pole[x-3][y] == 2:
+        if y > 0 and y < 5 and x > 2 and pole[x - 1][y] == 2 and pole[x - 2][y] == 2 and pole[x-3][y] == 2:
             if pole[x - 3][y+1] == 1:
                 pole[x + 3][y+1] = 3
             if pole[x-3][y-1] == 1:
